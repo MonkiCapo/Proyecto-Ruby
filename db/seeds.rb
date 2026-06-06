@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+# Crear un Pokémon inicial por defecto si no existe ninguno
+Pokemon.find_or_create_by!(name: "Michi Verde") do |p|
+  p.species = "Sprigatito"
+  p.level = 1
+  p.experience = 0
+  p.hunger = 50
+  p.happiness = 50
+end
